@@ -1,6 +1,98 @@
 // Sum or Product of Consecutive Numbers
 
+function muliplied(arr) {
+  const reducer = (multi, val) => {
+    multi * val;
+    
+  }
+  return arr.reduce(reducer, 0);
+}
 
+function Summation(arr) {
+  const reducer = (sum, val) => {
+    sum + val;
+    
+  }
+  return arr.reduce(reducer, 0);
+}
+
+let sync = require("readline-sync");
+  let someNumber = Number(sync.question(`Please enter an integer greater than 0.\n`));
+  let sumOrProduct = sync.question(`If you would like to multiply those numbers then press 1. \n If you would prefer to add those numbers then press 2.\n`);
+
+  let array1 = Array.from(Array(someNumber), (x, index) => index + 1);
+
+  if (sumOrProduct == 1) {
+    let sum = Summation(someNumber);
+    console.log(`The sum between 1 and ${someNumber} is ${sum}.`);
+  } else if (sumOrProduct == 2){
+    let product = muliplied(someNumber);
+    console.log(`The product between 1 and ${someNumber} is ${product}.`);
+  } else {
+    return `That does not compute.`
+  }
+
+  // let sync = require("readline-sync");
+  // let someNumber = Number(sync.question(`Please enter an integer greater than 0.\n`));
+  // let sumOrProduct = sync.question(`If you would like to multiply those numbers then press 1. \n If you would prefer to add those numbers then press 2.\n`);
+
+  // // let array1 = Array.from(Array(someNumber), (x, index) => index + 1);
+
+  // if (sumOrProduct == 1) {
+  //   let sum = allNumbersAdded(someNumber);
+  //   console.log(`The sum between 1 and ${someNumber} is ${sum}.`);
+  // } else if (sumOrProduct == 2){
+  //   let product = productOfAllNumbers(someNumber);
+  //   console.log(`The product between 1 and ${someNumber} is ${product}.`);
+  // } else {
+  //   return `That does not compute.`
+  // }
+
+  // function allNumbersAdded(someNumber) {
+  //   let total = 0;
+  //   for (i = 1; i <someNumber; i++) {
+  //     total += i; 
+  //   }
+  //   return total;
+  // }
+
+  // function productOfAllNumbers(someNumber) {
+  //   let total = 1;
+  //   for (i = 1; i< someNumber; i++) {
+  //     total *= i;
+  //   }
+  //   return total;
+  // }
+ 
+
+// function calculatedNumbers(someNumber) {
+//   let array1 = Array.from(Array(someNumber), (x, index) => index + 1);
+//   // let array2 = [...new Array(someNumber + 1)];
+//   let reducerMultiplied = (acc, curr) => {
+//     acc * curr;
+
+//   }
+//   let reducerSummed = (acc, curr) => {
+//     return acc + curr;
+//   }
+
+//   if (sumOrProduct == 1) {
+//     const product = array1.reduce(reducerMultiplied, 0);
+//     return `The product between 1 and ${someNumber} is ${product}.`
+//   } else if (sumOrProduct == 0) {
+//     const sum = array1.reduce(reducerSummed, 0);
+//     return `The sum between 1 and ${someNumber} is ${sum}.`
+//   } else {
+//     return `That does not compute`
+//   }
+// }
+
+// console.log(calculatedNumbers());
+
+// let result = 
+
+// let array1 = Array.from(Array(6), (x, index) => index + 1);
+// console.log(array1);
 // // Tip Calc
 // let sync = require("readline-sync");
 // let bill = sync.question(`How much is the bill?\n`);

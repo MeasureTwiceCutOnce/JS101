@@ -1,36 +1,62 @@
-// Sum or Product of Consecutive Numbers
+// Short Long Short
 
-function muliplied(arr) {
-  const reducer = (multi, val) => {
-    multi * val;
-    
-  }
-  return arr.reduce(reducer, 0);
-}
-
-function Summation(arr) {
-  const reducer = (sum, val) => {
-    sum + val;
-    
-  }
-  return arr.reduce(reducer, 0);
-}
+// shortLongShort('abc', 'defgh');    // "abcdefghabc"
+// shortLongShort('abcde', 'fgh');    // "fghabcdefgh"
+// shortLongShort('', 'xyz');         // "xyz"
 
 let sync = require("readline-sync");
-  let someNumber = Number(sync.question(`Please enter an integer greater than 0.\n`));
-  let sumOrProduct = sync.question(`If you would like to multiply those numbers then press 1. \n If you would prefer to add those numbers then press 2.\n`);
+let arr1 = sync.question(`Please enter some characters without spaces.\n`);
+let arr2 = sync.question(`Please enter some characters without spaces.\n`);
 
-  let array1 = Array.from(Array(someNumber), (x, index) => index + 1);
-
-  if (sumOrProduct == 1) {
-    let sum = Summation(someNumber);
-    console.log(`The sum between 1 and ${someNumber} is ${sum}.`);
-  } else if (sumOrProduct == 2){
-    let product = muliplied(someNumber);
-    console.log(`The product between 1 and ${someNumber} is ${product}.`);
+function shortLongShort(arr1, arr2) {
+  if (!(arr1 || arr2) === "string" ) {
+    return "Please enter only letters."
+  } else if (arr1.length > arr2.length){
+    let result = arr2.concat(arr1).concat(arr2);
+    return result;
   } else {
-    return `That does not compute.`
+    let result = arr1.concat(arr2).concat(arr1);
+    return result;
   }
+   
+}
+
+
+console.log(shortLongShort(arr1, arr2));
+
+// // Sum or Product of Consecutive Numbers
+
+// function muliplied(arr) {
+//   const reducer = (multi, val) => {
+//     multi * val;
+    
+//   }
+//   return arr.reduce(reducer, 0);
+// }
+
+// function Summation(arr) {
+//   const reducer = (sum, val) => {
+//     sum + val;
+    
+//   }
+//   return arr.reduce(reducer, 0);
+// }
+
+// let sync = require("readline-sync");
+//   let someNumber = Number(sync.question(`Please enter an integer greater than 0.\n`));
+//   let sumOrProduct = sync.question(`If you would like to multiply those numbers then press 1. \n If you would prefer to add those numbers then press 2.\n`);
+
+//   let array1 = Array.from(Array(someNumber), (x, index) => index + 1);
+
+//   if (sumOrProduct == 1) {
+//     let sum = Summation(someNumber);
+//     console.log(`The sum between 1 and ${someNumber} is ${sum}.`);
+//   } else if (sumOrProduct == 2){
+//     let product = muliplied(someNumber);
+//     console.log(`The product between 1 and ${someNumber} is ${product}.`);
+//   } else {
+//     return `That does not compute.`
+//   }
 
   // let sync = require("readline-sync");
   // let someNumber = Number(sync.question(`Please enter an integer greater than 0.\n`));

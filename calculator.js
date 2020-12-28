@@ -1,3 +1,7 @@
+const MESSAGES = require('./calculator_messages.json');
+
+
+
 function execute() {
   let operationOption = getUserInput('Hello.\n\n I am a simple calculator.\n\n I can perform simple operations like\n adding (+), subtracting (-), multiplying (x), and dividing (/).\n Please type which operation you would like to perform by \npressing "1" for adding, "2" for subtracting, "3" for dividing, and "4" for mutliplying.\n')
 

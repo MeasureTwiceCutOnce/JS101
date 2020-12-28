@@ -1,0 +1,13 @@
+{
+  "message": "Please only enter 1,2,3 or 4.",
+  "greeting": "Hello.\n\n I am a simple calculator.\n\n I can perform simple operations like\n adding (+), subtracting (-), multiplying (x), and dividing (/).\n Please type which operation you would like to perform by \npressing "1" for adding, "2" for subtracting, "3" for dividing, and "4" for mutliplying.\n",
+  "firstNumber": "Please enter your first number.\n",
+  "secondNumber": "Please enter your second number.\n",
+  "errorNaN": "Please input a number.\n",
+  "resultsReplyAddition": `\n ${inputInteger1} plus ${inputInteger2} equals ${total}.\n Thank you for calculating with me. \n<3 <3 <3 `
+  "resultsReplySubtraction": `\n ${inputInteger1} plus ${inputInteger2} equals ${total}.\n Thank you for calculating with me. \n<3 <3 <3 `
+  "resultsReplyDivision": `\n ${inputInteger1} plus ${inputInteger2} equals ${total}.\n Thank you for calculating with me. \n<3 <3 <3 `
+  "resultsReplyMultiplication": `\n ${inputInteger1} plus ${inputInteger2} equals ${total}.\n Thank you for calculating with me. \n<3 <3 <3 `
+
+
+}

@@ -32,18 +32,17 @@ function getComputerChoice(param, userChoice) {
 }
 
 function calculateWinner(userName, userChoice, computerChoice) {
-    
+    let winner = 0;
  if ( (userChoice === 1 && computerChoice === 3) || 
                     (userChoice === 3 && computerChoice === 2) ||
                     (userChoice === 2 && computerChoice === 1)) 
                     {
-    let winner = userName;
-  } else if ((computerChoice === 1 && userChoice === 3) || 
-  (computerChoice === 3 && userChoice === 2) ||
+    winner = userName;
+  }else if ((computerChoice === 1 && userChoice === 3) || (computerChoice === 3 && userChoice === 2) ||
   (computerChoice === 2 && userChoice === 1)) {
-    let winner = computerChoice;
+    return winner = computerChoice;
   } else {
-    let winner = 0;
+    return winner = 0;
   }
   
   return announceWinner(winner, userName, userChoice, computerChoice);

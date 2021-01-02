@@ -1,28 +1,55 @@
-// Short Long Short
+// Leap Years
 
-// shortLongShort('abc', 'defgh');    // "abcdefghabc"
-// shortLongShort('abcde', 'fgh');    // "fghabcdefgh"
-// shortLongShort('', 'xyz');         // "xyz"
-
-let sync = require("readline-sync");
-let arr1 = sync.question(`Please enter some characters without spaces.\n`);
-let arr2 = sync.question(`Please enter some characters without spaces.\n`);
-
-function shortLongShort(arr1, arr2) {
-  if (!(arr1 || arr2) === "string" ) {
-    return "Please enter only letters."
-  } else if (arr1.length > arr2.length){
-    let result = arr2.concat(arr1).concat(arr2);
-    return result;
+function isLeapYear(year) {
+  
+  if (year % 4 === 0 && year % 100 !== 0) {
+    return true;
+  } else if (year % 400 === 0) {
+    return true;
   } else {
-    let result = arr1.concat(arr2).concat(arr1);
-    return result;
+    return false;
   }
-   
 }
+  
+console.log(isLeapYear(2016))
+console.log(isLeapYear(2016))      // true
+console.log(isLeapYear(2015))      // false
+console.log(isLeapYear(2100) )     // false
+console.log(isLeapYear(2400))      // true
+console.log(isLeapYear(240000))    // true
+console.log(isLeapYear(240001))    // false
+console.log(isLeapYear(2000))      // true
+console.log(isLeapYear(1900))      // false
+console.log(isLeapYear(1752))      // true
+console.log(isLeapYear(1700))      // false
+console.log(isLeapYear(1))         // false
+console.log(isLeapYear(100))       // false
+console.log(isLeapYear(400))       // true
+// // Short Long Short
+
+// // shortLongShort('abc', 'defgh');    // "abcdefghabc"
+// // shortLongShort('abcde', 'fgh');    // "fghabcdefgh"
+// // shortLongShort('', 'xyz');         // "xyz"
+
+// let sync = require("readline-sync");
+// let arr1 = sync.question(`Please enter some characters without spaces.\n`);
+// let arr2 = sync.question(`Please enter some characters without spaces.\n`);
+
+// function shortLongShort(arr1, arr2) {
+//   if (!(arr1 || arr2) === "string" ) {
+//     return "Please enter only letters."
+//   } else if (arr1.length > arr2.length){
+//     let result = arr2.concat(arr1).concat(arr2);
+//     return result;
+//   } else {
+//     let result = arr1.concat(arr2).concat(arr1);
+//     return result;
+//   }
+   
+// }
 
 
-console.log(shortLongShort(arr1, arr2));
+// console.log(shortLongShort(arr1, arr2));
 
 // // Sum or Product of Consecutive Numbers
 

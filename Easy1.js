@@ -1,30 +1,49 @@
-// Leap Years
+// ASCII String Value
 
-function isLeapYear(year) {
-  
-  if (year % 4 === 0 && year % 100 !== 0) {
-    return true;
-  } else if (year % 400 === 0) {
-    return true;
-  } else {
-    return false;
+function asciiValue(string) {
+  let sum = 0;
+  for (let letters of string) {
+    sum += letters.charCodeAt()
   }
+  return sum;
 }
+console.log(asciiValue("Four score"));
+console.log(asciiValue("Launch School"));
+console.log(asciiValue("a"));
+console.log(asciiValue(""));
+
+asciiValue('Four score');         // 984
+asciiValue('Launch School');      // 1251
+asciiValue('a');                  // 97
+asciiValue('');                   // 0
+
+// // Leap Years
+
+// function isLeapYear(year) {
   
-console.log(isLeapYear(2016))
-console.log(isLeapYear(2016))      // true
-console.log(isLeapYear(2015))      // false
-console.log(isLeapYear(2100) )     // false
-console.log(isLeapYear(2400))      // true
-console.log(isLeapYear(240000))    // true
-console.log(isLeapYear(240001))    // false
-console.log(isLeapYear(2000))      // true
-console.log(isLeapYear(1900))      // false
-console.log(isLeapYear(1752))      // true
-console.log(isLeapYear(1700))      // false
-console.log(isLeapYear(1))         // false
-console.log(isLeapYear(100))       // false
-console.log(isLeapYear(400))       // true
+//   if (year % 4 === 0 && year % 100 !== 0) {
+//     return true;
+//   } else if (year % 400 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+  
+// console.log(isLeapYear(2016))
+// console.log(isLeapYear(2016))      // true
+// console.log(isLeapYear(2015))      // false
+// console.log(isLeapYear(2100) )     // false
+// console.log(isLeapYear(2400))      // true
+// console.log(isLeapYear(240000))    // true
+// console.log(isLeapYear(240001))    // false
+// console.log(isLeapYear(2000))      // true
+// console.log(isLeapYear(1900))      // false
+// console.log(isLeapYear(1752))      // true
+// console.log(isLeapYear(1700))      // false
+// console.log(isLeapYear(1))         // false
+// console.log(isLeapYear(100))       // false
+// console.log(isLeapYear(400))       // true
 // // Short Long Short
 
 // // shortLongShort('abc', 'defgh');    // "abcdefghabc"

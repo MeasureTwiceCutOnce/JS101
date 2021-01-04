@@ -10,8 +10,8 @@ function execute() {
 }
 
  
-function getLoanMonthlyDuration(inputParam) {
-    let numInMonths = inputParam * 12;
+function getLoanMonthlyDuration(numYears) {
+    let numInMonths = num * 12;
 
     return getMonthlyInterestRate(numInMonths, numInMonths); 
 }
@@ -36,6 +36,8 @@ function monthlyPaymentCalculator(inputParam2, inputParam1) {
   console.log(`\nYour monthly payments will be $${result.toFixed(2)} cents per month.\n Your monthly interest rate is ${inputParam2.toFixed(5)}.\n Your loan was calculated over ${inputParam1} months.` );
   console.log(inputParam2);
   console.log(inputParam1);
+  const outputString = Your monthly payments will be $${result.toFixed(2)} cents per month. Your monthly interest rate is ${inputParam2.toFixed(5)} Your loan was calculated over ${inputParam1} months..trim()
+console.log(outputString);
 }
 
 function getUserInput(inputParam) {

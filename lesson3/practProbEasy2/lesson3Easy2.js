@@ -1,3 +1,32 @@
+// // #10 Count the T's
+
+// let statement1 = "The Flintstones Rock!";
+// let statement2 = "Easy come, easy go.t";
+
+// console.log(statement1.match(/t/g||[]).length);
+// console.log(statement2.match(/t/g||[]).length);
+// // LS solution
+// statement1.split('').filter(char => char === 't').length;
+// statement2.split('').filter(char => char === 't').length;
+
+
+// // Creating Spaces
+
+// let title = "Flintstone Family Members";
+// console.log(title.length);
+// console.log(title.padStart(title.length + 20, " "));
+// let padding = Math.floor((40 - title.length) / 2);
+// console.log(title.padStart(padding + title.length));
+
+
+// // Checking if arrays
+
+// let numbers = [1, 2, 3, 4]; // true
+// let table = { field1: 1, field2: 2, field3: 3, field4: 4 }; // false
+
+// console.log(Array.isArray(numbers));
+// console.log(Array.isArray(table));
+
 // #7 Array from Object
 
 // let flintstones = { Fred: 0, Wilma: 1, Barney: 2, Betty: 3, Bambam: 4, Pebbles: 5 };

@@ -1,17 +1,69 @@
-// Using a for loop. It is amazing how much you do not know.
-let statement = "The Flintstones Rock";
+let arr = [2,3,4,5];
+console.log(Object.keys(arr).length === arr.length)
 
-let result = {};
 
-for (let counter = 0; counter < statement.length; counter += 1) {
-  let char = statement[counter];
-  if (char === ' ') continue;
 
-  result[char] = result[char] || 0;
-  result[char] += 1;
-}
+// let arr1 = [null, undefined, 3]
+// console.log(arr1.length);
 
-console.log(result)
+// arr1.length = 0;
+// console.log(arr1);
+// console.log(arr1.length)
+// arr1.length = 3;
+// console.log(arr1)
+  // while (arr1 === arr2) {
+  //   console.log("true");
+  //   break;
+  // }
+  // console.log("False");
+
+// // function lessThan(upperLimit) {
+// //   let lengths = [];
+
+// //   for (let candidate = 1; candidate < upperLimit; candidate += 1) {
+// //     lengths.push(candidate);
+// //   }
+
+// //   return lengths;
+// // }
+// // console.log(lessThan(5));
+
+// // let str = 'This is a string';
+// let arr = ['This', 'is', 'a', 'string'];
+// // let obj = { 'This is': 'a string' };
+// // let lastItem = arr[-1];
+// // console.log(lastItem)
+// // let dog = 'fido';
+
+// // let letters = dog.split('');
+// // letters[0] = letters[0].toUpperCase();
+// // dog = letters.join('');
+// let sliceItem = arr.slice(0,1);
+// console.log(sliceItem)
+// let item = arr.shift()
+// console.log(item);
+// console.log(arr.shift())
+
+// let cat = 'Butterscotch';
+
+// console.log(
+//   cat[-4]
+// )
+
+// // Using a for loop. It is amazing how much you do not know.
+// let statement = "The Flintstones Rock";
+
+// let result = {};
+
+// for (let counter = 0; counter < statement.length; counter += 1) {
+//   let char = statement[counter];
+//   if (char === ' ') continue;
+
+//   result[char] = result[char] || 0;
+//   result[char] += 1;
+// }
+
+// console.log(result)
 // let charsInStatement = statement.split("").filter(char => char !== " ");
 // let result = {};
 

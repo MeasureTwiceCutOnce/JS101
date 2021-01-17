@@ -1,5 +1,39 @@
-let arr = [2,3,4,5];
-console.log(Object.keys(arr).length === arr.length)
+const obj = { a: 'able', b: 'baker', c: 'charley' };
+let result = Object.values(obj).map(value => value.toUpperCase());
+console.log(result); // => [ 'ABLE', 'BAKER', 'CHARLEY' ]
+
+
+
+// let colors = ['green', 'blue', 'red'];
+// let result = colors.map(word => word.toUpperCase());
+// console.log(result); // ['GREEN', 'BLUE', 'RED']
+
+// let result = ['a', 'b', 'c'].filter(function(item) {
+//   console.log(item);
+// });
+
+// console.log(result); // []
+
+
+
+// let obj = [1,2,3]
+// obj.length = 10;
+// obj.forEach(num => console.log(num));
+// console.log(obj.length)
+// function foo(array, func) {
+//   let newArray = [];
+
+//   for (let index = 0; index < array.length; index += 1) {
+//     newArray[index] = func(array[index]);
+//   }
+
+//   return newArray;
+// }
+
+// console.log(foo([2,3,4,5]), foo());
+
+// let arr = [2,3,4,5];
+// console.log(Object.keys(arr).length === arr.length)
 
 
 

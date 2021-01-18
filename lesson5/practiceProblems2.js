@@ -1,14 +1,52 @@
 let arr = [['b', 'c', 'a'], [2, 1, 3], ['blue', 'black', 'green']];
-//OMG!!! This is crazy. I was able not able to do this one again! This is so frustrating.
-// OK. So I am supposed to map over this array and then ask if it is a string or a number. If string then split and sort. If a number then just sort.
 
-console.log(arr.map(array => {
-  if (typeof array[0] === "string") {
-    return array.slice().sort();
-  } else {
-    return array.slice().sort((a,b) => a - b);
-  }
-}))
+// console.log(arr.map(array => {
+//   return array.splice().sort((a,b)) {
+//     if (typeof array[0] === "string") {
+//         if (b > a) {
+//           return 1
+//         } else if(a > b ) {
+//           return -1;
+//         } else {
+//           return 0
+//         }
+//       }
+//   } else {
+//     return array.splice().sort((a,b) => {
+//        b - a;
+//     })
+//   }
+// }})
+console.log(
+arr.map(subArr => {
+  return subArr.slice().sort((a, b) => {
+    if (typeof a === 'number') {
+      return b - a;
+    }
+
+    if (a < b) {
+      return 1
+    } else if (a > b) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+}));
+
+// => [ [ 'c', 'b', 'a' ], [ 3, 2, 1 ], [ 'green', 'blue', 'black' ] ]
+
+// let arr = [['b', 'c', 'a'], [2, 1, 3], ['blue', 'black', 'green']];
+// //OMG!!! This is crazy. I was able not able to do this one again! This is so frustrating.
+// // OK. So I am supposed to map over this array and then ask if it is a string or a number. If string then split and sort. If a number then just sort.
+
+// console.log(arr.map(array => {
+//   if (typeof array[0] === "string") {
+//     return array.slice().sort();
+//   } else {
+//     return array.slice().sort((a,b) => a - b);
+//   }
+// }))
 
 // console.log(arr.map(array => {
 //   array.sort((a,b) => {

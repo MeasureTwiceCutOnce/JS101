@@ -1,40 +1,123 @@
-let arr = [['b', 'c', 'a'], [2, 1, 3], ['blue', 'black', 'green']];
+let obj = {
+  grape: { type: 'fruit', colors: ['red', 'green'], size: 'small' },
+  carrot: { type: 'vegetable', colors: ['orange'], size: 'medium' },
+  apple: { type: 'fruit', colors: ['red', 'green'], size: 'medium' },
+  apricot: { type: 'fruit', colors: ['orange'], size: 'medium' },
+  marrow: { type: 'vegetable', colors: ['green'], size: 'large' },
+};
 
-// console.log(arr.map(array => {
-//   return array.splice().sort((a,b)) {
-//     if (typeof array[0] === "string") {
-//         if (b > a) {
-//           return 1
-//         } else if(a > b ) {
-//           return -1;
-//         } else {
-//           return 0
-//         }
-//       }
-//   } else {
-//     return array.splice().sort((a,b) => {
-//        b - a;
+
+let fruitData = Object.values(obj);
+let fruitObj = Object.values(fruitData[0]);
+let fruitType = fruitObj[0];
+let fruitColor = fruitObj[1];
+let fruitSize = fruitObj[2];
+let newArray = [];
+
+newArray.push(fruitObj[1]);
+newArray.push(fruitObj[2]);
+
+console.log(newArray);
+
+// console.log(fruitObj);
+// console.log(fruitType);
+// console.log(fruitColor);
+// console.log(fruitSize);
+
+// HIYA! I got this one right as well which is such a blessing. It was not working at first because I had the return value of the function inside the forEach loop and not in the general part of the function, but it is nice to see my work adding up. No pun intended.
+// let arr = [[1, 6, 7], [1, 5, 3], [1, 8, 3]];
+
+// console.log(arr.sort((a,b) => {
+//   return valueOfOdds(a) - valueOfOdds(b);
+// }))
+
+// function valueOfOdds(array) {
+//   let value = 0;
+//   array.forEach(num => {
+//     if (num % 2 === 1) {
+//       value += num;
+//     }
+//   })
+//   return value;
+// }
+
+
+// THANK GOD! I was finally able to do a problem correctly. I did struggle with getting the syntax right, but after looking at the documentation, I was able to get it. I also, had made the mistake of using a map in a map that returned a new array which gave me too many nested arrays, so I had to rethink the issue and I read that filter would give a new array, so I used it like a boss. :-D
+// let arr = [[2], [3, 5, 7], [9], [11, 15, 18]];
+
+
+//   let newArray = arr.slice().map(subArray => {
+//     return subArray.filter(num => {
+//       return num % 3 === 0
 //     })
+//   })
+// console.log(newArray)
+
+// let arr = [{ a: 1 }, { b: 2, c: 3 }, { d: 4, e: 5, f: 6 }];
+
+// console.log(arr.map(obj => {
+//   let incrementedObj = {};
+
+//   for (let key in obj) {
+//     incrementedObj[key] = obj[key] + 1;
 //   }
-// }})
-console.log(
-arr.map(subArr => {
-  return subArr.slice().sort((a, b) => {
-    if (typeof a === 'number') {
-      return b - a;
-    }
 
-    if (a < b) {
-      return 1
-    } else if (a > b) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
-}));
+//   return incrementedObj;
+// })); // => [ { a: 2 }, { b: 3, c: 4 }, { d: 5, e: 6, f: 7 } ]
 
-// => [ [ 'c', 'b', 'a' ], [ 3, 2, 1 ], [ 'green', 'blue', 'black' ] ]
+// arr; // => [ { a: 1 }, { b: 2, c: 3 }, { d: 4, e: 5, f: 6 } ]
+
+// let arr = [{ a: 1 }, { b: 2, c: 3 }, { d: 4, e: 5, f: 6 }];
+
+// console.log(arr.map(obj => {
+//   let incrementedObj = {};
+
+//   for(let key in obj) {
+//     incrementedObj[key] = obj[key] + 1;
+
+//     return incrementedObj;
+//   }
+// }))
+// let arr = [['b', 'c', 'a'], [2, 1, 3], ['blue', 'black', 'green']];
+
+
+
+
+// // console.log(arr.map(array => {
+// //   return array.splice().sort((a,b)) {
+// //     if (typeof array[0] === "string") {
+// //         if (b > a) {
+// //           return 1
+// //         } else if(a > b ) {
+// //           return -1;
+// //         } else {
+// //           return 0
+// //         }
+// //       }
+// //   } else {
+// //     return array.splice().sort((a,b) => {
+// //        b - a;
+// //     })
+// //   }
+// // }})
+// console.log(
+// arr.map(subArr => {
+//   return subArr.slice().sort((a, b) => {
+//     if (typeof a === 'number') {
+//       return b - a;
+//     }
+
+//     if (a < b) {
+//       return 1
+//     } else if (a > b) {
+//       return -1;
+//     } else {
+//       return 0;
+//     }
+//   });
+// }));
+
+// // => [ [ 'c', 'b', 'a' ], [ 3, 2, 1 ], [ 'green', 'blue', 'black' ] ]
 
 // let arr = [['b', 'c', 'a'], [2, 1, 3], ['blue', 'black', 'green']];
 // //OMG!!! This is crazy. I was able not able to do this one again! This is so frustrating.

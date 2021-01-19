@@ -6,18 +6,67 @@ let obj = {
   marrow: { type: 'vegetable', colors: ['green'], size: 'large' },
 };
 
+let capitalize = word => word[0].toUpperCase() + word.slice(1);
 
-let fruitData = Object.values(obj);
-let fruitObj = Object.values(fruitData[0]);
-let fruitType = fruitObj[0];
-let fruitColor = fruitObj[1];
-let fruitSize = fruitObj[2];
-let newArray = [];
+console.log(Object.values(obj).map(attributes => {
+  if (attributes['type'] === 'fruit') {
+    return attributes['colors'].map(char => capitalize(char));
+  } else {
+    return attributes['size'].toUpperCase();
+  }
+}));
 
-newArray.push(fruitObj[1]);
-newArray.push(fruitObj[2]);
 
-console.log(newArray);
+// I was close to getting this right, but I am so frustrated that I am not getting this right. I will have to keep practicing and do like Jawad said and not take more than 15 to 30 minutes on the actually thinking of these problems. I will have to get better at these by just doing more of them. \
+
+
+// let fruitDataArray = Object.entries(obj);
+// let fruitNames = Object.keys(obj);
+// for(let i = 0; i < fruitDataArray.length; i++) {
+
+//   console.log(obj[fruitNames]["colors"]);
+
+// }
+
+
+
+// let fruitObj = Object.values(fruitData[0]);
+
+// let fruitType = fruitObj[0];
+// let fruitColor = fruitObj[1];
+// let fruitSize = fruitObj[2];
+// for(let key in obj) {
+//   let newArray = [];
+//   if(obj.fruit.type === "fruit") {
+
+//   }
+//   return
+// }
+// newArray.push(fruitObj[1]);
+// newArray.push(fruitObj[2]);
+
+// console.log(newArray);
+// // let members = Object.keys(munsters);
+// // let ages = Object.keys(Object.keys(munsters));
+
+// console.log(munsters["Herman"]["age"]);
+// console.log(munsters["Herman"]["gender"]);
+
+// let array = Object.entries(munsters);
+// // console.log(array);
+
+// function addAges(obj) {
+//   let sum = 0;
+
+//   for(let member in obj) {
+//    if(obj[member]["gender"] === "female") {
+//      sum += Number(obj[member]["age"]);
+//    }
+//   }
+//   return sum;
+// }
+// console.log(addAges(munsters));
+
 
 // console.log(fruitObj);
 // console.log(fruitType);

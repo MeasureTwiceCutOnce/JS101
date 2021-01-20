@@ -1,20 +1,111 @@
-let obj = {
-  grape: { type: 'fruit', colors: ['red', 'green'], size: 'small' },
-  carrot: { type: 'vegetable', colors: ['orange'], size: 'medium' },
-  apple: { type: 'fruit', colors: ['red', 'green'], size: 'medium' },
-  apricot: { type: 'fruit', colors: ['orange'], size: 'medium' },
-  marrow: { type: 'vegetable', colors: ['green'], size: 'large' },
-};
 
-let capitalize = word => word[0].toUpperCase() + word.slice(1);
 
-console.log(Object.values(obj).map(attributes => {
-  if (attributes['type'] === 'fruit') {
-    return attributes['colors'].map(char => capitalize(char));
-  } else {
-    return attributes['size'].toUpperCase();
+// // Practice Problem 17
+// // A UUID is a type of identifier often used to uniquely identify items, even when some of those items were created on a different server or by a different application. That is, without any synchronization, two or more computer systems can create new items and label them with a UUID with no significant risk of stepping on each other's toes. It accomplishes this feat through massive randomization. The number of possible UUID values is approximately 3.4 X 10E38, which is a huge number. The chance of a conflict is vanishingly small with such a large number of possible values.
+
+// // Each UUID consists of 32 hexadecimal characters (the digits 0-9 and the letters a-f) represented as a string. The value is typically broken into 5 sections in an 8-4-4-4-12 pattern, e.g., 'f65c57f6-a6aa-17a8-faa1-a67f2dc9fa91'.
+
+// // Write a function that takes no parameters and returns a UUID.
+
+// let randomNumbers = [1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"];
+
+function uuidCreator() {
+  let uuid = [];
+  let arr1 = genRanHex(8);
+  let arr2 = genRanHex(4);
+  let arr3 = genRanHex(4);
+  let arr4 = genRanHex(4);
+  let arr5 = genRanHex(12);
+  uuid.push(arr1);
+  uuid.push(arr2);
+  uuid.push(arr3);
+  uuid.push(arr4);
+  uuid.push(arr5);
+
+  return uuid.join("-");
+}
+
+const genRanHex = size => {
+  let result = [];
+  let hexRef = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+
+  for (let n = 0; n < size; n++) {
+    result.push(hexRef[Math.floor(Math.random() * 16)]);
   }
-}));
+  return result.join("");
+}
+
+console.log(uuidCreator());
+
+
+// function randomHexMaker() {
+//   let randNum = "";
+
+//   randNum = randomNumbers[Math.floor(Math.random()*16)]
+//   return randNum;
+// }
+
+// let arr = [['a', 1], ['b', 'two'], ['sea', {'c': 3}], ['D', ['a', 'b', 'c']]];
+
+// let obj = {};
+
+// arr.forEach(subArray => {
+//   obj[subArray[0]] = subArray[1];
+// })
+// console.log(obj);
+
+
+// // Below is my bumbling around about trying to figure out how to create an object in JS. I saw that you can intialize it by using let and then the object, so I knew I had to initialize the object first, but the problem came after when i didn't know how to get the elements into the object which is as simple as referencing the obj with the name that you want for the key, then assigning that to the value that you want in that place.
+// let obj = {};
+// let smallArray = ['a', 1];
+
+// obj[smallArray[0]] = smallArray[1];
+
+// console.log(obj);
+// // expected return value of function call
+// { a: 1, b: 'two', sea: { c: 3 }, D: [ 'a', 'b', 'c' ] }
+
+
+// let arr = [
+//   { a: [1, 2, 3] },
+//   { b: [2, 4, 6], c: [3, 6], d: [4] },
+//   { e: [8], f: [6, 10] },
+// ];
+
+
+// console.log(arr.filter(subObj => {
+//   return Object.values(subObj).every(subArray => {
+//     return subArray.every(num => {
+//       return num % 2 === 0;
+//     })
+//   })
+// }) )
+// Below is my incorrect answer, but I was close. I had used the map method twice which left me with the even numbers but they were nested two deep and that is not what it asked for.
+//       console.log(arr.map(subObj => {
+//   return subObj.map(subArray => {
+//     return subArray.filter(num => {
+//       return num % 2 === 0;
+//     })
+//   })
+// })
+
+// let obj = {
+//   grape: { type: 'fruit', colors: ['red', 'green'], size: 'small' },
+//   carrot: { type: 'vegetable', colors: ['orange'], size: 'medium' },
+//   apple: { type: 'fruit', colors: ['red', 'green'], size: 'medium' },
+//   apricot: { type: 'fruit', colors: ['orange'], size: 'medium' },
+//   marrow: { type: 'vegetable', colors: ['green'], size: 'large' },
+// };
+
+// let capitalize = word => word[0].toUpperCase() + word.slice(1);
+
+// console.log(Object.values(obj).map(attributes => {
+//   if (attributes['type'] === 'fruit') {
+//     return attributes['colors'].map(char => capitalize(char));
+//   } else {
+//     return attributes['size'].toUpperCase();
+//   }
+// }));
 
 
 // I was close to getting this right, but I am so frustrated that I am not getting this right. I will have to keep practicing and do like Jawad said and not take more than 15 to 30 minutes on the actually thinking of these problems. I will have to get better at these by just doing more of them. \

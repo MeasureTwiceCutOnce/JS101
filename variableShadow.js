@@ -9,6 +9,6 @@
 
 
 let names = ['kim', 'joe', 'sam', 'Jim', 'Rohn'];
-names.forEach((_, index) => {
-  console.log(`'${index + 1}: Got a name!'` )
+names.forEach((name) => {
+  console.log(`'${name[0].toUpperCase() + name.substring(1)}: Got a name!'` )
 });

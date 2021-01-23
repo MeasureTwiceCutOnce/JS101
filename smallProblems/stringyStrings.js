@@ -1,6 +1,15 @@
+// function stringy(size) {
+//     let result = "";
+//     for (let idx = 0; idx < size; idx++) {
+//       let number = ((idx % 2) === 0) ? 1 : 0;
+//       result += number;
+//     }
+//     console.log( result.length)
+//   };
 
+// My answer below does work. For the my other incorrect answer which is at the bottom that didn't work needed the alternating function that the odd even does with a if statemnet as is seen in the LS answer above. I had also forgotten about the fact that a string can just simply be concatenated with more letters as when we original make the mistake thinging that a number plus a number will give us the addition, but it just concates them when they are strings.
 function stringy(num) {
-    return  Array(num).fill("10").join("").slice(0, num);
+    return Array(num).fill("10").join("").slice(0, num)
 }
 
 stringy(6);    // "101010"

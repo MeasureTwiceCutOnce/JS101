@@ -1,3 +1,31 @@
+// I like what I have done here,
+// but there are few things that I would like to improve.
+/*
+0. As of right now, the quit feature is not working optimally, so
+ I need to get that working correctly because I currently have to
+ ctrl c to quit.
+1. I would like to center the initial questions on the console, and
+wrap them with box to make it look a little more professional.
+2. I would also like to add a progression bar by using a
+simple wrap border box and filling it with stars which would
+increase with every question answered. So the length of
+the box would be the number of total questions and another star
+ would add after the user answers a question which would give
+  the effect of a progress bar.
+3. I would also like to clear the console after every question
+ as opposed to having every question stacked on top of each other
+  until the end of the page which is also needed because as I said before,
+   I wanted to have the each question wrapped in a box border.
+
+Likes
+1. I like how I have the article finder function that
+will look to see if the word starts with a vowel and
+if it does then it will return a "an" instead of an "a".
+2. I think it was also a good idea to have the variables saved into
+ a number that corresponds to the blank spot to make constructing
+ the text box more clear and easier.
+*/
+
 function madlibsMaker(words) {
     let readline =require("readline-sync");
 
@@ -5,14 +33,15 @@ function madlibsMaker(words) {
         return readline.question(input)
     }
 
+    function displayMessage(message) {
+        console.log(message);
+    }
+
     while(true) {
         console.clear();
 
         let welcome = `Welcome to Madlibs where we have fun everyday in everyway!!`;
 
-        function displayMessage(message) {
-            console.log(message);
-        }
 
         displayMessage(welcome);
 
@@ -58,7 +87,7 @@ function madlibsMaker(words) {
             if(userChoice.toLowerCase().charAt(0)  === "y") {
                 displayMessage(welcome)
             } else {
-                return false;
+                break;
             }
         }
 }

@@ -1,23 +1,30 @@
+/*
+The Cool-Aid man says OH YEAH!!!!!! I actually got this one right. I had the right thinking from the begining that I needed to use a two pointers solution, but I initially made the mistake of thinking of this as a Palindrome so I compared the first number with the last when I should have been comparing the first number with the midpoint plus one number. I also had to convert my number to a string in order to use the two pointer feature.
+
+*/
 function twice(num) {
 
-    if(num.length % 2 === 0 && ifDoubles(num)) {
+    if(String(num).length % 2 === 0 && isDoubles(num)) {
         return num;
     } else {
         return num * 2;
     }
 }
 
-function ifDoubles(num) {
+function isDoubles(num) {
+    let numString = String(num);
     let i = 0;
-    let j = num.length;
+    let j = Math.floor(numString.length / 2);
 
-    while(i < j) {
-        if(num[i] === num[j]) {
-            i++;
-            j--;
-        } else {
+    while(i < Math.floor(numString.length / 2)) {
+        if(numString[i] !== numString[j] ) {
             return false;
+        } else {
+            i++;
+            j++;
+            return numString[i] === numString[j];
         }
+
     }
 }
 console.log(

@@ -1,17 +1,6 @@
-function getUserInput(message) {
-    let sync = require("readline-sync");
-    return sync.question(message);
-}
+
 
 function isNumFound() {
-
-
-    console.log(`The number ${num6} does not appear in ${numArray}.`)
-}
-
-function createNumArray() {
-    let numArray = [];
-
     let num1 = getUserInput(`Please enter the 1st number.`)
     let num2 = getUserInput(`Please enter the 2nd number.`)
     let num3 = getUserInput(`Please enter the 3rd number.`)
@@ -19,18 +8,15 @@ function createNumArray() {
     let num5 = getUserInput(`Please enter the 5th number.`)
     let num6 = getUserInput(`Please enter the 6th number.`)
 
-    console.log(numArray.push(num1))
+    console.log(num1,num2,num3,num4,num5,num6);
 }
 
-
-function isValidNum(num) {
-    if(isNaN(num)) {
-        return `Please only enter numbers`
-    }
+function getUserInput(message) {
+    let sync = require("readline-sync");
+    return sync.question(message);
 }
 
-
-createNumArray();
+isNumFound();
 // Write a program that solicits six numbers from the user, then logs a message that describes whether or not the sixth number appears amongst the first five numbers.
 
 // Enter the 1st number: 25

@@ -10,6 +10,17 @@ function isNumFound() {
 }
 
 function createNumArray() {
+
+
+    if (inputSeriesOption !== 'a' && inputSeriesOption !== 'b') {
+        return "I am error. Please only enter 'a' or 'b'.";
+      } else if (inputSeriesOption === 'a') {
+        return optionA();
+      } else {
+        return optionB();
+      }
+    }
+
     let numArray = [];
 
     let num1 = getUserInput(`Please enter the 1st number.`)

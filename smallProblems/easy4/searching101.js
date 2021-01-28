@@ -1,19 +1,37 @@
-
-
-function isNumFound() {
-    let num1 = getUserInput(`Please enter the 1st number.`)
-    let num2 = getUserInput(`Please enter the 2nd number.`)
-    let num3 = getUserInput(`Please enter the 3rd number.`)
-    let num4 = getUserInput(`Please enter the 4th number.`)
-    let num5 = getUserInput(`Please enter the 5th number.`)
-    let num6 = getUserInput(`Please enter the 6th number.`)
-
-    console.log(num1,num2,num3,num4,num5,num6);
-}
-
 function getUserInput(message) {
     let sync = require("readline-sync");
     return sync.question(message);
+}
+
+
+function isNumFound() {
+    let numArray = [];
+    console.clear();
+
+    let num1 = Number(getUserInput(`Please enter the 1st number.`))
+    let num2 = Number(getUserInput(`Please enter the 2nd number.`))
+    let num3 = Number(getUserInput(`Please enter the 3rd number.`))
+    let num4 = Number(getUserInput(`Please enter the 4th number.`))
+    let num5 = Number(getUserInput(`Please enter the 5th number.`))
+    let num6 = Number(getUserInput(`Please enter the 6th number.`))
+
+            numArray.push(num1);
+            numArray.push(num2);
+            numArray.push(num3);
+            numArray.push(num4);
+            numArray.push(num5);
+    console.clear();
+
+    if (isAboveNum(num6,numArray)) {
+        console.log( `The number ${isAboveNum(num6,numArray)} is greater than ${num6} in the set of numbers: [${num1}, ${num2}, ${num3}, ${num4}, ${num5}].`)
+
+    } else {
+        console.log(`The number ${num6} is the largest number in the set of numbers: [${num1}, ${num2}, ${num3}, ${num4}, ${num5}].`)
+    }
+}
+
+function isAboveNum(num, array) {
+    return array.find(element => element > num)
 }
 
 isNumFound();

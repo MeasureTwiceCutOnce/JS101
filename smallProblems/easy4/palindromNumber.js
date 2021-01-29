@@ -1,6 +1,11 @@
 function isPalindromicNumber(num) {
-    return num === num.toString().split("").reverse().join("");
+
+    return parseInt(num,10).toString === parseInt(num,10).toString(10).split("").reverse().join("");
 }
+// function isPalindromicNumber(num) {
+//     return num.toString(10) === num.toString(10).split("").reverse().join("");
+// }
+
 console.log(
 isPalindromicNumber(34543),        // true
 isPalindromicNumber(123210),       // false

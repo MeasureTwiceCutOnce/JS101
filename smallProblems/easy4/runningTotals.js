@@ -1,3 +1,58 @@
+function runningTotal(array) {
+  // reduce
+  //   return array.reduce((acc, ele, idx) => {
+  //   if (idx > 0) {
+  //      acc.push(ele + acc[idx - 1])
+  //   } else {
+  //      acc.push(ele);
+  //   }
+  //   return acc;
+  // },[])
+  // map
+  let sum = 0;
+
+  let result = array.map((num) => {
+    return  sum += num;
+  })
+return result;
+  // for loop
+  // if (array[0] === 0) return [];
+  // for (let i = 0; i < array.length; i++) {
+  //   sum += array[i];
+  //   newArray.push(sum);
+  // }
+}
+
+
+
+
+
+console.log(
+  runningTotal([2, 5, 13]),             // [2, 7, 20]
+  runningTotal([14, 11, 7, 15, 20]),    // [14, 25, 32, 47, 67]
+  runningTotal([3]),                    // [3]
+  runningTotal([]),                     // []
+  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function runningTotal(array) {
 //     let newArray = [];
 //     let total = 0;
@@ -45,19 +100,13 @@
 // }
 
 // The below isCoen's answer
-function runningTotal(arr) {
-    let sum = 0;
+// function runningTotal(arr) {
+//     let sum = 0;
 
-    let result = arr.map((num, idx) => {
-      return sum += num;
-    });
+//     let result = arr.map((num, idx) => {
+//       return sum += num;
+//     });
 
-    return result;
-  }
+//     return result;
+//   }
 
-console.log(
-runningTotal([2, 5, 13]),             // [2, 7, 20]
-runningTotal([14, 11, 7, 15, 20]),    // [14, 25, 32, 47, 67]
-runningTotal([3]),                    // [3]
-runningTotal([]),                     // []
-)

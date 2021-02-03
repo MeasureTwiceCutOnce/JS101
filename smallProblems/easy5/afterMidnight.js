@@ -1,14 +1,17 @@
 function timeOfDay(number) {
-    let totalDays = Math.floor(number / 1440);
-    let totalHours = Math.floor(((number / 1440) - totalDays) * 24);
-    let totalMinutes = (((number / 1440) - totalDays) * 24) - totalHours;
-    let minutes = Math.round(totalMinutes * 60);
-    let daysOfTheWeek = {0:"Sunday",1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday"}
+    let minutes = number % 1440;
+    minutes = minutes >= 0 ? minutes : 1440 + minutes;
+    // let totalDays = Math.floor(number / 1440);
+    // let totalHours = Math.floor(((number / 1440) - totalDays) * 24);
+    // let totalMinutes = (((number / 1440) - totalDays) * 24) - totalHours;
+    // let minutes = Math.round(totalMinutes * 60);
+    // let daysOfTheWeek = {0:"Sunday",1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday"}
 
-    if ( totalHours < 10 && minutes < 10) {return `${daysOfTheWeek[totalDays]} "${daysOfTheWeek[totalDays]} 0${totalHours}:${minutes}0"`};
-    if ( totalHours < 10) {return `${daysOfTheWeek[totalDays]} "0${totalHours}:${minutes}"`};
-    if ( minutes < 10) {return `${daysOfTheWeek[totalDays]} "${totalHours}:${minutes}0"`};
-    return `${daysOfTheWeek[totalDays]} "${totalHours}:${minutes}"`
+    // if ( totalHours < 10 && minutes < 10) {return `${daysOfTheWeek[totalDays]} "${daysOfTheWeek[totalDays]} 0${totalHours}:${minutes}0"`};
+    // if ( totalHours < 10) {return `${daysOfTheWeek[totalDays]} "0${totalHours}:${minutes}"`};
+    // if ( minutes < 10) {return `${daysOfTheWeek[totalDays]} "${totalHours}:${minutes}0"`};
+    // return `${daysOfTheWeek[totalDays]} "${totalHours}:${minutes}"`
+    console.log(minutes)
 }
 
 // function timeOfDay(number) {

@@ -1,7 +1,7 @@
 const readline = require('readline-sync');
 
 const SUITS = ['H', 'D', 'S', 'C'];
-const VALUES = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+const VALUES = ['1','2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'];
 
 function prompt(message) {
   console.log(`=> ${message}`);
